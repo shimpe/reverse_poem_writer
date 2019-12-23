@@ -58,6 +58,13 @@
       </widget>
      </item>
      <item>
+      <widget class="QPushButton" name="saveAs">
+       <property name="text">
+        <string>Save As</string>
+       </property>
+      </widget>
+     </item>
+     <item>
       <widget class="QPushButton" name="closebtn">
        <property name="text">
         <string>Close</string>
@@ -68,6 +75,14 @@
    </item>
   </layout>
  </widget>
+ <tabstops>
+  <tabstop>left</tabstop>
+  <tabstop>right</tabstop>
+  <tabstop>load</tabstop>
+  <tabstop>save</tabstop>
+  <tabstop>saveAs</tabstop>
+  <tabstop>closebtn</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
  <slots>

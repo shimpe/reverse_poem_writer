@@ -36,6 +36,9 @@ class Ui_Dialog(object):
         self.save = QtWidgets.QPushButton(Dialog)
         self.save.setObjectName("save")
         self.horizontalLayout.addWidget(self.save)
+        self.saveAs = QtWidgets.QPushButton(Dialog)
+        self.saveAs.setObjectName("saveAs")
+        self.horizontalLayout.addWidget(self.saveAs)
         self.closebtn = QtWidgets.QPushButton(Dialog)
         self.closebtn.setObjectName("closebtn")
         self.horizontalLayout.addWidget(self.closebtn)
@@ -43,10 +46,16 @@ class Ui_Dialog(object):
 
         self.retranslateUi(Dialog)
         QtCore.QMetaObject.connectSlotsByName(Dialog)
+        Dialog.setTabOrder(self.left, self.right)
+        Dialog.setTabOrder(self.right, self.load)
+        Dialog.setTabOrder(self.load, self.save)
+        Dialog.setTabOrder(self.save, self.saveAs)
+        Dialog.setTabOrder(self.saveAs, self.closebtn)
 
     def retranslateUi(self, Dialog):
         _translate = QtCore.QCoreApplication.translate
         Dialog.setWindowTitle(_translate("Dialog", "Reverse Poem Writer"))
         self.load.setText(_translate("Dialog", "Load"))
         self.save.setText(_translate("Dialog", "Save"))
+        self.saveAs.setText(_translate("Dialog", "Save As"))
         self.closebtn.setText(_translate("Dialog", "Close"))
